@@ -2,7 +2,7 @@
 
 ## 📋 Présentation du projet
 
-**GRWP-CV-Nat** est une application web destinée à la création et à la gestion de CV en ligne. Ce projet est entièrement développé en **HTML** afin de garantir une simplicité d'accès et de personnalisation pour tout utilisateur. L'objectif principal est de fournir une interface intuitive permettant la visualisation, la modification et la mise en ligne d'un CV professionnel.
+**GRWP-CV-Nat** est une application web destinée à la création et à la gestion de CV en ligne. Ce projet est entièrement développé en **HTML** afin de garantir une simplicité d'accès et de personnalisation pour tout utilisateur. L'objectif principal est de fournir une interface intuitive permettant la visualisation.
 
 ### ✨ Fonctionnalités principales
 
