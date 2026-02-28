@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>CV Natasha</title>
+    <style>
+        /* CSS pour les animations des skills */
+        .skill-bar {
+            width: 100%;
+            height: 20px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ec4899, #f472b6);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 2s ease-in-out;
+        }
+        .skill-animated {
+            width: var(--width) !important;
+        }
+        @media print {
+            .no-print { display: none !important; }
+        }
+    </style>
 </head>
-<body>
 <body class="bg-gray-200 text-gray-800">
     <div class="max-w-4xl mx-auto p-6 bg-pink-50 rounded-lg shadow-lg mt-10">
         <header class="flex items-center">
@@ -23,40 +46,40 @@
             <h2 class="section-title text-2xl font-semibold mb-3 mt-10">About Me</h2>
             <p class="text-gray-700">
                 Informaticienne de gestion passionnée par les nouvelles technologies,
-                j’aime comprendre les besoins des utilisateurs et transformer les
-                idées en solutions concrètes. Rigoureuse et curieuse, je m’investis
-                pleinement dans chaque projet afin d’optimiser les processus et
-                d’assurer la qualité des systèmes informatiques. Mon objectif est de
-                mettre mes compétences techniques et mon sens de l’analyse au service
-                d’une entreprise dynamique et innovante.
+                j'aime comprendre les besoins des utilisateurs et transformer les
+                idées en solutions concrètes. Rigoureuse et curieuse, je m'investis
+                pleinement dans chaque projet afin d'optimiser les processus et
+                d'assurer la qualité des systèmes informatiques. Mon objectif est de
+                mettre mes compétences techniques et mon sens de l'analyse au service
+                d'une entreprise dynamique et innovante.
             </p>
         </section>
         
-        <section class="mt-8">
+        <section class="mt-8" id="skills-section">
             <h2 class="section-title text-2xl font-semibold mb-3">Skills</h2>
             <div class="space-y-4">
-                <div>
+                <div data-skill="90">
                     <h3 class="font-semibold">HTML & CSS</h3>
                     <div class="skill-bar">
-                        <div class="skill-fill" style="width: 90%"></div>
+                        <div class="skill-fill" style="--width: 90%"></div>
                     </div>
                 </div>
-                <div>
+                <div data-skill="80">
                     <h3 class="font-semibold">JavaScript</h3>
                     <div class="skill-bar">
-                        <div class="skill-fill" style="width: 80%"></div>
+                        <div class="skill-fill" style="--width: 80%"></div>
                     </div>
                 </div>
-                <div>
+                <div data-skill="85">
                     <h3 class="font-semibold">Laravel</h3>
                     <div class="skill-bar">
-                        <div class="skill-fill" style="width: 85%"></div>
+                        <div class="skill-fill" style="--width: 85%"></div>
                     </div>
                 </div>
-                <div>
+                <div data-skill="75">
                     <h3 class="font-semibold">Support utilisateurs N1</h3>
                     <div class="skill-bar">
-                        <div class="skill-fill" style="width: 75%"></div>
+                        <div class="skill-fill" style="--width: 75%"></div>
                     </div>
                 </div>
             </div>
@@ -69,32 +92,20 @@
                     <h3 class="font-semibold">Support IT Niveau 1 à OBERSON ABELS SA, Genève</h3>
                     <p class="text-gray-600">Sept. 2024 - Janv. 2025</p>
                     <ul class="list-disc ml-6 mt-2 text-gray-700">
-                        <li>
-                            Support utilisateurs Niveau 1
-                        </li>
-                        <li>
-                            Création et maintenance des comptes utilisateurs
-                        </li>
+                        <li>Support utilisateurs Niveau 1</li>
+                        <li>Création et maintenance des comptes utilisateurs</li>
                         <li>Création, suivi et mise à jour des tickets de support (Service-Now)</li>
-                        <li>
-                            Création de script powershell sur environnement de production
-                        </li>
-                        <li>
-                            Installation, maintenance et dépannage de postes utilisateurs
-                        </li>
+                        <li>Création de script powershell sur environnement de production</li>
+                        <li>Installation, maintenance et dépannage de postes utilisateurs</li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-semibold">Développement (JS)</h3>
                     <p class="text-gray-600">Janv. 2024 - Août 2024</p>
                     <ul class="list-disc ml-6 mt-2 text-gray-700">
-                        <li>
-                            Configuration et gestion de lecteurs HMP et d’écrans digitaux
-                        </li>
-                        <li>
-                            Création et diffusion de contenus graphiques sur des systèmes d’affichage dynamique
-                        </li>
-                        <li>Développement de sites web dédiés à l’affichage d’alertes en temps réel sur les écrans HMP</li>
+                        <li>Configuration et gestion de lecteurs HMP et d'écrans digitaux</li>
+                        <li>Création et diffusion de contenus graphiques sur des systèmes d'affichage dynamique</li>
+                        <li>Développement de sites web dédiés à l'affichage d'alertes en temps réel sur les écrans HMP</li>
                     </ul>
                 </div>
             </div>
@@ -104,13 +115,34 @@
             <h2 class="section-title text-2xl mb-3 font-semibold">Education</h2>
             <div>
                 <h3 class="font-semibold">CFC en informatique d'entreprise</h3>
-                <p class="text-gray-600">
-                    Ecole technique, Ecole des métiers Lausanne
-                </p>
+                <p class="text-gray-600">Ecole technique, Ecole des métiers Lausanne</p>
                 <p class="text-gray-500">Diplômé: Juin 2025</p>
             </div>
         </section>
     </div>
-</body>
+
+    <script>
+        // 🎯 JAVASCRIPT INTERACTIF - 2 fonctionnalités cool
+        
+        // 1. Animation des skill bars au scroll
+        function animateSkills() {
+            const skillsSection = document.getElementById('skills-section');
+            const skillBars = document.querySelectorAll('.skill-fill');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillPercent = entry.target.parentElement.dataset.skill;
+                        entry.target.classList.add('skill-animated');
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Initialisation au chargement
+        window.addEventListener('load', animateSkills);
+    </script>
 </body>
 </html>
