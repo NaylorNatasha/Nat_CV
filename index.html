@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>CV Natasha</title>
 </head>
 <body>
-    <div>
-        <header>
-            <div>
-                <img src="pfp.png" alt="Profile Picture">
+<body class="bg-gray-200 text-gray-800">
+    <div class="max-w-4xl mx-auto p-6 bg-pink-50 rounded-lg shadow-lg mt-10">
+        <header class="flex items-center">
+            <div class="h-30 w-30 overflow-hidden rounded-full mr-8">
+                <img src="pfp.png" alt="Profile Picture" class="h-full w-full object-cover">
             </div>
             <div>
-                <h1>Natasha Shiwen Naylor</h1>
-                <p>Informaticienne de gestion | Etudiante à l'ETML-ES</p>
-                <p>Email: nswnaylor@gmail.com | Num: +41 79 209 51 01 | LinkedIn: 
-                    <a href="https://www.linkedin.com/in/natasha-naylor-77727a14b/" target="_blank">Natasha Naylor</a>
-                </p>
+                <h1 class="text-3xl font-bold text-gray-900">Natasha Shiwen Naylor</h1>
+                <p class="text-lg text-gray-800 mt-2">Informaticienne de gestion | Etudiante à l'ETML-ES</p>
+                <p class="text-gray-700 mt-2">Email: nswnaylor@gmail.com | Num: +41 79 209 51 01 | LinkedIn: <a class="hover:underline hover:text-blue-500" href="https://www.linkedin.com/in/natasha-naylor-77727a14b/" target="_blank"> Natasha Naylor</a></p>
             </div>
         </header>
-
         <section>
-            <h2>About Me</h2>
-            <p>
+            <h2 class="section-title text-2xl font-semibold mb-3 mt-10">About Me</h2>
+            <p class="text-gray-700">
                 Informaticienne de gestion passionnée par les nouvelles technologies,
                 j’aime comprendre les besoins des utilisateurs et transformer les
                 idées en solutions concrètes. Rigoureuse et curieuse, je m’investis
@@ -32,50 +31,86 @@
                 d’une entreprise dynamique et innovante.
             </p>
         </section>
-
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>Laravel</li>
-                <li>Support utilisateurs N1</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Expériences</h2>
-            <div>
-                <h3>Support IT Niveau 1 à OBERSON ABELS SA, Genève</h3>
-                <p>Sept. 2024 - Janv. 2025</p>
-                <ul>
-                    <li>Support utilisateurs Niveau 1</li>
-                    <li>Création et maintenance des comptes utilisateurs</li>
-                    <li>Création, suivi et mise à jour des tickets de support (Service-Now)</li>
-                    <li>Création de script PowerShell sur environnement de production</li>
-                    <li>Installation, maintenance et dépannage de postes utilisateurs</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Développement (JS)</h3>
-                <p>Janv. 2024 - Août 2024</p>
-                <ul>
-                    <li>Configuration et gestion de lecteurs HMP et d’écrans digitaux</li>
-                    <li>Création et diffusion de contenus graphiques sur des systèmes d’affichage dynamique</li>
-                    <li>Développement de sites web dédiés à l’affichage d’alertes en temps réel sur les écrans HMP</li>
-                </ul>
+        
+        <section class="mt-8">
+            <h2 class="section-title text-2xl font-semibold mb-3">Skills</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-semibold">HTML & CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold">JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Laravel</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Support utilisateurs N1</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 75%"></div>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section>
-            <h2>Education</h2>
+        
+        <section class="mt-8">
+            <h2 class="section-title font-semibold text-2xl mb-3">Expériences</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-semibold">Support IT Niveau 1 à OBERSON ABELS SA, Genève</h3>
+                    <p class="text-gray-600">Sept. 2024 - Janv. 2025</p>
+                    <ul class="list-disc ml-6 mt-2 text-gray-700">
+                        <li>
+                            Support utilisateurs Niveau 1
+                        </li>
+                        <li>
+                            Création et maintenance des comptes utilisateurs
+                        </li>
+                        <li>Création, suivi et mise à jour des tickets de support (Service-Now)</li>
+                        <li>
+                            Création de script powershell sur environnement de production
+                        </li>
+                        <li>
+                            Installation, maintenance et dépannage de postes utilisateurs
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Développement (JS)</h3>
+                    <p class="text-gray-600">Janv. 2024 - Août 2024</p>
+                    <ul class="list-disc ml-6 mt-2 text-gray-700">
+                        <li>
+                            Configuration et gestion de lecteurs HMP et d’écrans digitaux
+                        </li>
+                        <li>
+                            Création et diffusion de contenus graphiques sur des systèmes d’affichage dynamique
+                        </li>
+                        <li>Développement de sites web dédiés à l’affichage d’alertes en temps réel sur les écrans HMP</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-8">
+            <h2 class="section-title text-2xl mb-3 font-semibold">Education</h2>
             <div>
-                <h3>CFC en informatique d'entreprise</h3>
-                <p>Ecole technique, Ecole des métiers Lausanne</p>
-                <p>Diplômé: Juin 2025</p>
+                <h3 class="font-semibold">CFC en informatique d'entreprise</h3>
+                <p class="text-gray-600">
+                    Ecole technique, Ecole des métiers Lausanne
+                </p>
+                <p class="text-gray-500">Diplômé: Juin 2025</p>
             </div>
         </section>
     </div>
+</body>
 </body>
 </html>
